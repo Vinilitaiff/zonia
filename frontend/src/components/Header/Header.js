@@ -5,7 +5,7 @@ import { MdArrowBack } from 'react-icons/md';
 
 import history from '~/services/history';
 
-import logo from '~/assets/logo.svg';
+// import logo from '~/assets/logo.svg';
 import { Container, Wrapper } from './Header_Styles';
 
 export default function Header() {
@@ -20,11 +20,6 @@ export default function Header() {
     <Container>
       <Wrapper>
         <nav>
-          <h1>
-            <Link to="/dashboard">
-              <img src={logo} alt="Tour" />
-            </Link>
-          </h1>
           {pathname !== '/dashboard' && (
             <button type="button" onClick={goBack}>
               <MdArrowBack size={18} />

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Form, Input } from '@rocketseat/unform';
 import * as Yup from 'yup';
 
-import logo from '~/assets/logo.svg';
+// import logo from '~/assets/logo.svg';
 
 import { signUpRequest } from '~/store/modules/auth/actions';
 
@@ -29,7 +29,7 @@ export default function SignUp() {
 
   return (
     <>
-      <img src={logo} alt="Tour" />
+      {/* <img src={logo} alt="Tour" /> */}
 
       <Form schema={schema} onSubmit={handleSubmit}>
         <Input name="name" type="text" placeholder="Name" />

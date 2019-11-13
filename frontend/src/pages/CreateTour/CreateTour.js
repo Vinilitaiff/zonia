@@ -18,10 +18,10 @@ export default function CreateTour() {
   async function handleSubmit(data) {
     try {
       setLoading(true);
-
-      const response = await api.post('tours', data);
-      toast.success('Tour criado com sucesso!');
-      history.push(`/tour/${response.data.id}`);
+      console.tron.log(data);
+      // const response = await api.post('tours', data);
+      // toast.success('Tour criado com sucesso!');
+      // history.push(`/tour/${response.data.id}`);
     } catch (err) {
       toast.error('Erro ao criar o Tour. Tente novamente.');
       setLoading(false);
@@ -31,12 +31,12 @@ export default function CreateTour() {
   }
 
   const schema = Yup.object().shape({
-    banner_id: Yup.number()
-      .transform(value => (!value ? undefined : value))
-      .required('Banner is required'),
+    // banner_id: Yup.number()
+    //  .transform(value => (!value ? undefined : value))
+    //  .required('Banner is required'),
     title: Yup.string().required('Title is required'),
     description: Yup.string().required('Description is required'),
-    date: Yup.date().required('Date is required'),
+    // date: Yup.date().required('Date is required'),
     location: Yup.string().required('Location is required'),
   });
 
